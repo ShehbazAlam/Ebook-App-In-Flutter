@@ -1,0 +1,15 @@
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/quran.jpeg"
+  linux: true
+
+  web:
+    generate: true
+    image_path: "assets/images/quran.jpeg"
+    background_color: "#FFFF"
+    theme_color: "#FFFFFF"
+  windows:
+    generate: true
+    image_path: "assets/images/quran.jpeg"
+    icon_size: 48
