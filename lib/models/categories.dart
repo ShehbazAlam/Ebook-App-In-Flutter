@@ -1,20 +1,11 @@
-// To parse this JSON data, do
-//
-//     final category = categoryFromJson(jsonString);
-
 import 'dart:convert';
-import 'package:http/http.dart' as http;
-
-Category categoryFromJson(String str) => Category.fromJson(json.decode(str));
-
-String categoryToJson(Category data) => json.encode(data.toJson());
 
 class Category {
-  String id;
+  int id;
   String name;
   String backImg;
   String icon;
-  String height;
+  double height;
 
   Category({
     required this.id,
@@ -23,6 +14,10 @@ class Category {
     required this.icon,
     required this.height,
   });
+
+  factory Category.fromRawJson(String str) => Category.fromJson(json.decode(str));
+
+  String toRawJson() => json.encode(toJson());
 
   factory Category.fromJson(Map<String, dynamic> json) => Category(
     id: json["id"],
@@ -39,5 +34,4 @@ class Category {
     "icon": icon,
     "height": height,
   };
-
 }

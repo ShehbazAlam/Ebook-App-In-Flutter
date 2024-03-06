@@ -1,12 +1,13 @@
 import 'package:ebook/pages/books/book_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import '../../../models/categories.dart';
 
 class CategoryItem extends StatelessWidget {
 
-  final Category? category;
+  final Category category;
   const CategoryItem(this.category, {super.key});
 
   @override
@@ -18,7 +19,7 @@ class CategoryItem extends StatelessWidget {
         child: Stack(
           children: [
             Container(
-              height: category!.height as double,
+              height: category!.height,
               decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(category!.backImg),
@@ -32,7 +33,7 @@ class CategoryItem extends StatelessWidget {
               left: 20,
               child: Column(
                 children: [
-                  Icon(category!.icon as IconData?, size: 36, color: Colors.white,),
+                  const Icon(Icons.confirmation_num_sharp, size: 36, color: Colors.white,),
                   Text(category!.name, style: Theme.of(context).textTheme.headlineMedium!.apply(color: Colors.white),)
                 ],
               ),
