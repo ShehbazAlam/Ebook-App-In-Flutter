@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:ebook/constants/colors.dart';
 
 class CustomTab extends StatelessWidget {
   final int selected;
   final Function callback;
 
-  CustomTab(this.selected, this.callback, {Key? key}) : super(key: key);
+  CustomTab(this.selected, this.callback, {super.key});
   final tabs =["Ebooks", "AudioBooks", "Books"];
 
 
   @override
   Widget build(BuildContext context){
-    final width = MediaQuery.of(context).size.width;
     return SizedBox(
       height: 80,
       child: ListView.builder(
@@ -24,7 +22,7 @@ class CustomTab extends StatelessWidget {
             child: Container(
               height: 30,
               width: 150.0,
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0), color: Color(0xffD0D0D0)),
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0), color: const Color(0xffD0D0D0)),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: Row(
@@ -33,7 +31,7 @@ class CustomTab extends StatelessWidget {
                   children: [
                     Text(
                       tabs[index],
-                      style: TextStyle(fontSize: 15),
+                      style: const TextStyle(fontSize: 15),
                     ),
                   ],
                 ),

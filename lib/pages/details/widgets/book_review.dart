@@ -1,4 +1,3 @@
-import 'package:ebook/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 import '../../../models/book.dart';
@@ -32,19 +31,6 @@ class BookReview extends StatelessWidget {
           )
         ],
       ),
-    );
-  }
-
-  Widget _buildStar() {
-    final List<Color> color = [
-      Colors.amber,
-      Colors.amber,
-      Colors.amber,
-      Colors.amber,
-      Colors.grey.withOpacity(0.6),
-    ];
-    return Row(
-      children: color.map((e) => Icon(Icons.star, size: 25, color: e)).toList(),
     );
   }
 }

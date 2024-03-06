@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../commons/appbar/appbar.dart';
-import '../books/widgets/book_gridview.dart';
 import '../search/search.dart';
 
 class DownloadsPage extends StatelessWidget {
@@ -26,8 +25,8 @@ class DownloadsPage extends StatelessWidget {
                 ],
               ),
               Expanded(
-                child: BookGridView(
-                ),
+                child: Container(),
+
               ),
             ],
           ),

@@ -2,7 +2,7 @@ import 'package:ebook/utils/constants/text_strings.dart';
 import 'package:ebook/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
+import 'package:get/get.dart';
 import 'bottom_nav.dart';
 
 
@@ -17,7 +17,7 @@ class MainApp extends StatelessWidget {
           statusBarColor: Colors.transparent,
         )
     );
-    return MaterialApp(
+    return GetMaterialApp(
         theme: TAppTheme.lightTheme,
         themeMode: ThemeMode.system,
         darkTheme: TAppTheme.darkTheme,

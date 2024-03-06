@@ -5,7 +5,7 @@ class CustomTab extends StatelessWidget {
   final int selected;
   final Function callback;
 
-  CustomTab(this.selected, this.callback, {Key? key}) : super(key: key);
+  CustomTab(this.selected, this.callback, {super.key});
   final tabs =["تفسیر", "ترجمہ", "سیرت", "احادیث"];
 
 

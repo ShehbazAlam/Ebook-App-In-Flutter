@@ -2,7 +2,6 @@ import 'package:ebook/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import '../../../models/book.dart';
-import '../../../utils/constants/fonts.dart';
 import '../../../utils/constants/text_strings.dart';
 
 class BookDetail extends StatelessWidget{
@@ -17,8 +16,8 @@ class BookDetail extends StatelessWidget{
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(book.category,
-          style: const TextStyle(
+          const Text('cat',
+          style: TextStyle(
             color: Colors.deepOrange,
             fontWeight: FontWeight.bold,
           ),

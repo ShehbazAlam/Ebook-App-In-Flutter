@@ -1,8 +1,5 @@
 import 'package:ebook/models/book.dart';
-import 'package:ebook/utils/constants/colors.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import '../../../utils/constants/sizes.dart';
 import '../../details/details.dart';
 
@@ -21,7 +18,7 @@ class BookItem extends StatelessWidget {
         children: [
 
           Container(
-            height: book!.height as double,
+            height: book!.height,
             decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(book!.banner),

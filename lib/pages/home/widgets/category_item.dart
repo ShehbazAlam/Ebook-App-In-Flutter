@@ -1,7 +1,5 @@
 import 'package:ebook/pages/books/book_list.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import '../../../models/categories.dart';
 
@@ -14,15 +12,15 @@ class CategoryItem extends StatelessWidget {
   Widget build(BuildContext context){
     return GestureDetector(
         onTap: () => Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => BookListPage(category: category!))
+            MaterialPageRoute(builder: (context) => BookListPage(category: category))
         ),
         child: Stack(
           children: [
             Container(
-              height: category!.height,
+              height: category.height,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage(category!.backImg),
+                    image: AssetImage(category.backImg),
                     fit: BoxFit.cover,
                   ),
                   borderRadius: BorderRadius.circular(10)
@@ -34,7 +32,7 @@ class CategoryItem extends StatelessWidget {
               child: Column(
                 children: [
                   const Icon(Icons.confirmation_num_sharp, size: 36, color: Colors.white,),
-                  Text(category!.name, style: Theme.of(context).textTheme.headlineMedium!.apply(color: Colors.white),)
+                  Text(category.name, style: Theme.of(context).textTheme.headlineMedium!.apply(color: Colors.white),)
                 ],
               ),
             )

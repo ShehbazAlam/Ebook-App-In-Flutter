@@ -5,15 +5,15 @@ Book bookFromJson(String str) => Book.fromJson(json.decode(str));
 String bookToJson(Book data) => json.encode(data.toJson());
 
 class Book {
-  String id;
+  int id;
   String name;
   String discreption;
   String banner;
   String writer;
   DateTime publishedOn;
   String content;
-  String category;
-  String height;
+  int category;
+  double height;
 
   Book({
     required this.id,

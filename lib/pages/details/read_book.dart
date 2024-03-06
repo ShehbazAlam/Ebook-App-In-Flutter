@@ -1,8 +1,6 @@
-import 'dart:io';
 import 'package:ebook/commons/appbar/appbar.dart';
 import 'package:ebook/models/book.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:flutter_html/flutter_html.dart';
 

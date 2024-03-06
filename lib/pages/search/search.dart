@@ -1,6 +1,5 @@
 import 'package:ebook/pages/search/widgets/search_bar.dart';
 import 'package:ebook/utils/device/device_utility.dart';
-import 'package:ebook/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/constants/sizes.dart';

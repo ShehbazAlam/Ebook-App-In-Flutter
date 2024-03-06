@@ -1,28 +1,26 @@
 import 'package:ebook/commons/appbar/appbar.dart';
 import 'package:ebook/pages/home/controllers/future_controller.dart';
 import 'package:ebook/utils/constants/text_strings.dart';
-import 'package:ebook/utils/http/http_client.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:http/http.dart' as http;
 
 import '../../commons/appbar/drawer.dart';
 import '../../commons/widgets/promo_slider.dart';
-import '../../models/categories.dart';
 import '../../utils/constants/sizes.dart';
 import 'widgets/category_item.dart';
 
 class HomePage extends StatelessWidget {
+
+  HomePage({super.key});
   final FutureController controller = Get.put(FutureController());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const MyDrawer(),
-      body: controller.isLoading == true ? const Center(
+      body: controller.isLoading.value ? const Center(
         child: CircularProgressIndicator(),
       ) : SingleChildScrollView(
         child: Column(

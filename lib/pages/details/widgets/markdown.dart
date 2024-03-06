@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -9,7 +8,7 @@ class MyMarkdownWidget extends StatelessWidget {
   final ScrollController controller;
   final String markdownData;
 
-  MyMarkdownWidget({required this.controller, required this.markdownData});
+  const MyMarkdownWidget({super.key, required this.controller, required this.markdownData});
 
   @override
   Widget build(BuildContext context) {
