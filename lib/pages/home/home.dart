@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
 import '../../commons/appbar/drawer.dart';
 import '../../commons/widgets/promo_slider.dart';
@@ -20,9 +21,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const MyDrawer(),
-      body: controller.isLoading.value ? const Center(
-        child: CircularProgressIndicator(),
-      ) : SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Column(
           children: [
             MyAppBar(
@@ -51,16 +50,19 @@ class HomePage extends StatelessWidget {
               padding:
                 const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
                 child: Obx(
-                        () => StaggeredGridView.countBuilder(
-                              itemCount: controller.categoryList.length,
-                              shrinkWrap: true,
-                              physics: const ScrollPhysics(),
-                              crossAxisCount: 4,
-                              crossAxisSpacing: 16,
-                              mainAxisSpacing: 16,
-                              itemBuilder: (_, index) => CategoryItem(controller.categoryList[index]),
-                              staggeredTileBuilder: (_) => const StaggeredTile.fit(2),
-                )
+                        () => Skeletonizer(
+                          enabled: controller.enableSkeleton.value,
+                          child: StaggeredGridView.countBuilder(
+                                itemCount: controller.categoryList.length,
+                                shrinkWrap: true,
+                                physics: const ScrollPhysics(),
+                                crossAxisCount: 4,
+                                crossAxisSpacing: 16,
+                                mainAxisSpacing: 16,
+                                itemBuilder: (_, index) => CategoryItem(controller.categoryList[index]),
+                                staggeredTileBuilder: (_) => const StaggeredTile.fit(2),
+                                          ),
+                        )
               )
             )
           ],

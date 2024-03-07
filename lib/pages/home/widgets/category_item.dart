@@ -1,6 +1,6 @@
 import 'package:ebook/pages/books/book_list.dart';
 import 'package:flutter/material.dart';
-
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import '../../../models/categories.dart';
 
 class CategoryItem extends StatelessWidget {
@@ -31,7 +31,7 @@ class CategoryItem extends StatelessWidget {
               left: 20,
               child: Column(
                 children: [
-                  const Icon(Icons.confirmation_num_sharp, size: 36, color: Colors.white,),
+                  Icon(MdiIcons.fromString(category.icon), size: 46, color: Colors.white,),
                   Text(category.name, style: Theme.of(context).textTheme.headlineMedium!.apply(color: Colors.white),)
                 ],
               ),

@@ -25,9 +25,14 @@ class PromoSlider extends StatelessWidget {
             BannerImage(assetImage: TImages.promoBanner1,),
             BannerImage(assetImage: TImages.promoBanner3,),
           ],
+
           options: CarouselOptions(
               viewportFraction: 1,
-            onPageChanged: (index, _) => controller.updatePageIndicator(index)
+            onPageChanged: (index, _) => controller.updatePageIndicator(index),
+            autoPlay: true,
+            autoPlayInterval: const Duration(seconds: 3),
+            autoPlayAnimationDuration: const Duration(milliseconds: 800),
+            autoPlayCurve: Curves.fastOutSlowIn,
           ),
         ),
         const SizedBox(height: TSizes.spaceBtwItems,),

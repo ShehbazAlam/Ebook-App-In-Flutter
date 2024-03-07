@@ -10,4 +10,9 @@ class HomeController extends GetxController{
     carouselCurrentIndex.value = index;
   }
 
+  @override
+  void onInit() {
+    // TODO: implement onInit
+    super.onInit();
+  }
 }

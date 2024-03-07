@@ -22,9 +22,11 @@ dependencies:
   flutter_html:
   flutter_linkify: ^6.0.0
   http:
+  skeletonizer:
 
   # Icons
   iconsax: ^0.0.8
+  material_design_icons_flutter:
 
   # Product Specific
   readmore: ^2.2.0
