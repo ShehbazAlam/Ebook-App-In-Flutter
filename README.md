@@ -1,6 +1,6 @@
 # eBook App
 
-Welcome to the eBook App, a Flutter-based mobile application that allows users to read and manage their eBooks. This app provides a seamless and user-friendly interface for browsing, reading, and organizing eBooks.
+Welcome to the eBook App, a Flutter-based mobile application that allows users to read eBooks in Urdu language. This app provides a seamless and user-friendly interface for browsing, reading, and organizing eBooks.
 
 ## Features
 
